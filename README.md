@@ -1,4 +1,5 @@
-# Basic-of-Software-Architecture-and-Design-patterns-in-Java
+# Basic of Software Architecture and Design patterns
+## Programming language: Java
 
 SOLID principles and design patterns
 
