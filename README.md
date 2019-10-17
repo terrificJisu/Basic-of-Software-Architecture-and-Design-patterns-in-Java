@@ -8,8 +8,9 @@ Design patterns
 Object oriented design
 ```
 
-```
+
  *  S <--> SINGLE RESPONSIBILITY PRINCIPLE
+ ```
  
     A software entity (class, method) should have only on reason to change
     If a class or a method does more than one procedure,
@@ -22,9 +23,9 @@ Object oriented design
  
     It leads to a low coupled design with less and lighter dependencies
 ```
-```
+
  *  O -> OPEN / CLOSED PRINCIPLE
- 
+ ```
     ---------------------------------------------------------------------------------
     What is the MOTIVATION behind SOLID principles?
        An application should take care of the frequent changes that are done
@@ -59,8 +60,9 @@ Object oriented design
            1.) Strategy pattern
            2.) Template pattern
 ```
+
  *  L -> LISKOV SUBSTITUTION PRINCIPLE
- 
+ ```
    --------------------------------------------------------------------------------
  
    What is the motivation of Liskov principle?
