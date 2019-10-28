@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/BasicOfSoftwareArchitectureAndDesignPatternsInJava.iml" filepath="$PROJECT_DIR$/BasicOfSoftwareArchitectureAndDesignPatternsInJava.iml" />
+      <module fileurl="file://$PROJECT_DIR$/behavioral design patterns/behavioral design patterns.iml" filepath="$PROJECT_DIR$/behavioral design patterns/behavioral design patterns.iml" />
     </modules>
   </component>
 </project>
