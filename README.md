@@ -210,7 +210,8 @@ Strategy pattern
 
 Observe pattern
 ```
-   Defines a one-to-many dependency -> if one object changes state, all of its dependents are notified automatically
+   Defines a one-to-many dependency -> if one object changes state, all of its dependents 
+   are notified automatically
   
    The observers rely/dependent on the subjects
  
