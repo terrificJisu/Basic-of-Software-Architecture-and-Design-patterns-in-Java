@@ -5,10 +5,10 @@ SOLID principles and design patterns
 
 ```
 SOLID principles
-Design patterns
+Design patterns - Behavioral design pattern
 Object oriented design
 ```
-
+### SOLID principles
 
  *  S <--> SINGLE RESPONSIBILITY PRINCIPLE
  ```
@@ -162,6 +162,71 @@ D -> DEPENDENCY INVERSION PRINCIPLE
            Dog dog = new Dog();
            create Animal interface
            Animal dog = new Dog();  
+```
+
+### Behavioral design pattern
+
+Strategy pattern
+```
+
+   Very important principle #1 in design -> take what varies and encapsulate it ... and it will not
+       affect the rest of our code
+ 
+     The code will be much more flexible .. later you can later or extend the parts that vary without
+       affecting those that does not !!!
+ 
+           code that changes <-------> code that stays the same
+ 
+   Very important principle #2 in design -> program to an interface/supertype not an implementation !!!
+       Abstract superclass would be perfect too ...
+           - the actual runtime object is not locked into the code
+           - the type of variable should be a supertype/interface: can be of any
+                                                                   concrete implementation
+ 
+          Dog dog = new Dog(); not so good "programming to an implementation"
+          Animal dog = new Dog() GOOD      "programming to an interface"
+ 
+   Sometimes, it is good to separate behaviors from implementation: easier to reuse it
+       + We can add new behavior without modifying any of our existing behavior classes !!!
+           SOLID PRINCIPLE !!!
+ 
+   Very important principle #3 in design -> Favor composition over inheritance !!!
+ 
+     class Book {
+         private Writer writer;
+     }
+ 
+     class Book extends Writer {
+ 
+     }
+ 
+       Composition: HAS-A relationship -> it gives you a lot more flexibility
+           1. You can encapsulate stuffs into their own set of classes
+           2. YOU CAN CHANGE AT RUNTIME with interfaces
+               so composition is used in several design patterns
+ 
+       Inheritance: IS-A relationship 
+```
+
+Observe pattern
+```
+   Defines a one-to-many dependency -> if one object changes state, all of its dependents are notified automatically
+  
+   The observers rely/dependent on the subjects
+ 
+       Why is it good? LOOSE COUPLING !!!
+           -> when two objects are loosely coupled, they can interact but they have little knowledge of
+              each other
+           -> the only thing the subject knows about an observer is that it implements a certain interface
+           -> we can add observers whenever we want: just have to implement the Observer interface
+           -> we do not have to modify the subject to add new type of observers
+           -> we can independently reuse subjects or observers
+           -> we can change the subject or observer independently
+ 
+      SO loosely coupled design is very good: we can build flexible systems that can handle change
+           because the interdependency between objects are minimal
+ 
+   Very important principle in design -> USE LOOSELY COUPLED DESIGNS BETWEEN OBJECTS THAT INTERACTS
 ```
 
 ```
