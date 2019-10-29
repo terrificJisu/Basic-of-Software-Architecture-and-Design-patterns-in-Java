@@ -252,6 +252,13 @@ Commmand pattern
                                To execute a command, it passes the command object to the invoker object
  ```
 
+Iterator pattern
+```
+   Iterator pattern is very commonly used design pattern in Java !!!
+       This is used to get a way to access the elements of a collection object in
+           sequential manner without any need to know its underlying representation 
+```
+
 ```
    MVC Pattern: we can separate the application with the help of this pattern
      Why is it good? if we want to add extra features it can be done very very very easily !!!
