@@ -259,6 +259,63 @@ Iterator pattern
            sequential manner without any need to know its underlying representation 
 ```
 
+Tmplate Pattern
+```
+   In Template pattern, an abstract class exposes defined way /  template to execute its methods
+ 
+   Its subclasses can override the method implementation as per need but the invocation
+   is to be in the same way as defined by an abstract class
+ 
+   abstract class Game() {
+       abstract void initialize();
+       abstract void startGame();
+       abstract void finishGame();
+   }
+```
+
+Null Object Pattern
+```
+   Null Object Pattern
+ 
+    - Motivation: reference may be null !!!
+    - It can be very elaborate to deal with null references
+    - We have to check whether a reference is null or not -> NullPointerException
+       if we call methods on null objects
+ 
+    GOOD TO AVOID NULL REFERENCES,
+       For example: return empty ArrayList instead of null ...
+                    Or we have to use several if() checks whether the reference is null
+                    For example: dealing with binary trees
+ 
+                    class Node {
+                        private int data;
+                        private Node leftChild;
+                        private rightChild;
+ 
+                        ...
+                    }
+ 
+    SOLUTION: the null object design pattern
+ 
+       We create an abstract class specifying various operations to be done
+           Concrete classes extending this class and a null object class providing
+               do nothing implementation of this class
+                   ~ this approach can be used where we need to check null value !!!
+```
+
+Visitor Pattern
+```
+  Visitor Pattern ->  way of separating an algorithm from an object structure on which it operates
+ 
+       A practical result of this separation is the ability to add
+           new operation to existing object structures without modifying those structures
+               ~ we can solve the open-closed principle with this design pattern as well !!!
+ 
+           IMPORTANT: we can extract common operations into a unique class
+ 
+                      For example: webshop application
+```
+
 ```
    MVC Pattern: we can separate the application with the help of this pattern
      Why is it good? if we want to add extra features it can be done very very very easily !!!
