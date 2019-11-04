@@ -316,6 +316,62 @@ Visitor Pattern
                       For example: webshop application
 ```
 
+### Creational design pattern
+
+Singleton Pattern
+```
+   Singleton Pattern -> restricts the instantiation of a class to one object
+       This is useful when exactly one object is needed to coordinate actions across the system
+ 
+               ~ for example: we need just single database instance !!!
+```
+
+Factory Pattern
+```
+   Factory Pattern: helps to create loosely coupled OO designs !!!
+ 
+     WHAT IS THE PROBLEM WITH THE NEW KEYWORD?
+       We should not program to an implementation, we should program to an interface
+           BUT every time we use "new" keyword we do so !!!
+ 
+           - so when we instantiate a class that is definitely an implementation
+ 
+           - tying our code to a concrete class: make our application
+               more fragile and less flexible
+ 
+            - in java ->  if we program to an interface, our system will work for any class
+               implementing that interface ( because of polymorphism )
+ 
+   The concrete new Dog() classes may have to be changed as new concrete classes
+       are added: so our code will not be closed for modification
+ 
+           - we have to find the part in our code that will change -> separate it
+           - WE MAY ENCAPSULATE OBJECT CREATION
+ 
+                   We can do it with Factory Pattern !!!
+```
+
+Builder Pattern
+```
+   WHY TO PREFER BUILDER PATTERN?
+ 
+       - There would be lots of parameters in the constructor ~ hard to follow
+           Hard not to confuse parameters !!!
+               ~ setters are the same, not the best solution
+ 
+       - Not extensible: when we have to add one more optional parameters, we have to create a new constructor
+           Telescoping constructors appear !!!
+               With a builder --> we just add another method
+ 
+       - Immutable property: we should consider parallel execution
+           The best is to use objects that can not be modified after they have been created
+               "immutable objects"
+              ~ so there will not be any problems because of concurrent updates by multiple threads
+```
+
+Data Access Object (DAO) Pattern
+
+### MVC Model
 ```
    MVC Pattern: we can separate the application with the help of this pattern
      Why is it good? if we want to add extra features it can be done very very very easily !!!
