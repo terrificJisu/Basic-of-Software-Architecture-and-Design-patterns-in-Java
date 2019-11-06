@@ -371,6 +371,53 @@ Builder Pattern
 
 Data Access Object (DAO) Pattern
 
+### Structural Design Patterns
+
+Decorator pattern
+```
+   Important design principle -> classes should be open for extension bu closed
+                                 for modification !!!
+ 
+                    For example: ObserverPattern we can add new Observers + extend Subject
+                                 without adding code to Subject
+ 
+                                + DECORATOR PATTERN HELPS TO MAKE OPEN CLOSED PRINCIPLE COME TRUE
+ 
+       - our goals is to allow classes to be easily extended with new behavior without
+         modifying existing code
+ 
+       - is is good ->  FLEXIBLE !!! if the requirements are changing we do not have to rewrite
+                                     the whole application
+       - applying the open-closed principle everywhere can lead to hard to understand code !!!
+ 
+       -----------------------------------------------------------------------------------------------
+ 
+       Decorator Pattern: attaches additional responsibilities to an object dynamically !!!
+           Decorators provide a flexible alternative to subclassing for extending functionality
+ 
+       For example: new LineNumberInputStream(new BufferdInputStream(new FileInputStream()));
+ 
+```
+
+Facade pattern
+```
+  This pattern provides a unified interface to a set of interfaces in a system.
+ 
+       It defines a high level interface that makes the subsystem easier to use.
+
+```
+
+Adapter pattern
+```
+  Adapter Pattern -> converts an interface of a class into an
+                      other interface the clients expect !!!
+ 
+          - It enables classes working together that could not otherwise
+            because of the incompatible interfaces
+ 
+          - Composition is very important !!! Favor composition over inheritance
+ ```
+
 ### MVC Model
 ```
    MVC Pattern: we can separate the application with the help of this pattern
@@ -388,3 +435,46 @@ Data Access Object (DAO) Pattern
             
             MODEL < --- > CONTROLLER < --- > VIEW
 ```
+
+### Miscellaneous
+Service locator pattern and JNDI
+```
+  JNDI -> Java Naming and Directory Interface
+  Allows Java software clients to discover and look up data and objects via a name
+ 
+       It is an API: independent of any implementation
+           ~ it is implemented with service locator pattern usually
+ 
+           For example: we can lookup data source when using application server !!!
+
+ Service Locator:
+  It is a design pattern --> It is for obtaining the processes involved in obtaining
+                              a service with a string abstraction layer
+ 
+           We have a central registry "service locator"
+ 
+           ADVANTAGES
+               - It is like a run-time linker: allows code to be added at run-time without
+                                               re-compiling the source code
+               - can make some optimization
+                   For example: the application can detect it has a better database
+                                library than the default one -> alter the registry accordingly
+ 
+          DISADVANTAGES
+               - black box: harder to detect and recover from errors
+               - registry hides the dependencies --> causes run-time errors instead of compile-time
+                                                    ones and we do not like it
+               - difficult to maintain the registry: dependency injection is more convenient
+ 
+         SERVICE LOCATOR VS DEPENDENCY INJECTION
+           Both are the just implementations of the dependency inversion principle !!!
+               ~ so depend upon abstraction rather than on implementation --> loosely couple
+ 
+           - With service locator the application class asks for it explicitly by
+             a message to the locator
+           - With injection there is no explicit request, the service appears in the application
+             class - hence the inversion of control
+           - Easier to test application with dependency injection
+           - THE CHOICE IS NOT SO IMPORTANT: THE PRINCIPLE IS IMPORTANT -> WE SHOULD SEPARATE
+             SERVICE CONFIGURATION FROM THE USE OF SERVICES WITHIN AN APPLICATION
+ ```
